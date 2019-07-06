@@ -1,7 +1,12 @@
-const initState = () => [];
+const initState = () => ({
+  players: []
+});
 
 const actions = {
-  'INIT_PLAYERS': (state, { players }) => players,
+  'INIT_PLAYERS': (state, { players }) => ({
+    ...state,
+    players,
+  }),
 };
 
 export default (state = initState(), action) => {

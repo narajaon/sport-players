@@ -1,10 +1,10 @@
 import React from 'react';
-import PlayerList from './containers/PlayerList'
+import PlayerTable from './containers/PlayerTable'
 
 function App() {
   return (
     <div className="App">
-      <PlayerList />
+      <PlayerTable />
     </div>
   );
 }

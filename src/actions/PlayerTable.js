@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export function initPlayers(players) {
+export function initPlayers(players) {    
     return { type: 'INIT_PLAYERS', players };
 }
 
