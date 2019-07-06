@@ -1,0 +1,1 @@
+export const api = 'https://eurosportdigital.github.io/eurosport-web-developer-recruitment/headtohead.json';
