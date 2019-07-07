@@ -34,12 +34,10 @@ const useStyles = makeStyles(theme => ({
 export default function PlayerTable({ players }) {
   const classes = useStyles();
 
-  console.log(players);
-
   if (players.length === 0) {
     return (
       <div className={classes.root}>
-        <Paper className={classes.paper} align="center">
+        <Paper data-jest="no-data-table" className={classes.paper} align="center">
           No data available
         </Paper>
       </div>
@@ -71,7 +69,7 @@ export default function PlayerTable({ players }) {
           </TableHead>
           <TableBody>
             {players.map(player => (
-              <TableRow key={player.shortname}>
+              <TableRow data-jest="player-row" key={player.shortname}>
                 <TableCell>
                   <Avatar
                     avatarURL={ player.picture }
