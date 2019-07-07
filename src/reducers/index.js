@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import playersReducer from './playersReducer'
-import appReducer from './appReducer'
+import Players from './Players'
+import App from './App'
 
 export default combineReducers({
-    appReducer,
-    playersReducer,
+    appReducer: App,
+    playersReducer: Players,
 });

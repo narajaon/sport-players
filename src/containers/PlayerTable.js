@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux'
 
-import { fetchPlayers } from '../actions/PlayerTable';
+import { fetchPlayers } from '../actions/Players';
 import PlayerTable from '../components/PlayerTable'
 
 const mapStateToProps = ({ playersReducer }) => {
@@ -11,7 +11,7 @@ const mapStateToProps = ({ playersReducer }) => {
 
 const mapDispatchToProps = { fetchPlayers };
 
-const PlayerTableContainer  = ({ players, fetchPlayers }) => {
+export const PlayerTableContainer  = ({ players, fetchPlayers }) => {
   useEffect(() => {
     fetchPlayers();
   }, [fetchPlayers]);
