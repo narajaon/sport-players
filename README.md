@@ -42,3 +42,4 @@ Runs jest and shows code coverage (npm test -- --coverage doesn't work properly 
 
 - More comments
 - Better UI (more colors, animations etc.)
+- Better code coverage
