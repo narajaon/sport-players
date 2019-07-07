@@ -30,15 +30,14 @@ describe('grid reducers', () => {
 		expect(reducer(undefined, initPlayers(players))).to.eql({ players });
 	});
 
-	it('should fetch data from the api', () => {
+	it('should fetch data from the api', async () => {
 		const store = mockStore({ players: [] })
 
-		store.dispatch(fetchPlayers())
-			.then(() => {
-				expect(store.getActions()).to.eql(initPlayers(players));
-			})
-			.catch(() => {
-				expect(store.getActions()).to.eql(switchAppState(APP_STATES.ERROR));
-			});
+		try {
+			await store.dispatch(fetchPlayers())
+			expect(store.getActions()).to.eql([initPlayers(players)]);
+		} catch (error) {
+			expect(store.getActions()).to.eql([switchAppState(APP_STATES.ERROR)]);
+		}
 	});
 });

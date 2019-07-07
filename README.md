@@ -33,6 +33,10 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 Runs eslint through all .js files in the src/ folder
 
+### `npm run test:coverage`
+
+Runs jest and shows code coverage (npm test -- --coverage doesn't work properly https://github.com/facebook/create-react-app/issues/6888)
+
 ## Possible upgrades
 
 - More comments
