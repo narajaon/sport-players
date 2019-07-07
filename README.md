@@ -41,5 +41,6 @@ Runs jest and shows code coverage (npm test -- --coverage doesn't work properly 
 ## Possible upgrades
 
 - More comments
+- Prop type checking
 - Better UI (more colors, animations etc.)
 - Better code coverage
