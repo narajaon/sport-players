@@ -14,7 +14,7 @@ const mapDispatchToProps = { fetchPlayers };
 export const PlayerTableContainer  = ({ players, fetchPlayers }) => {
   useEffect(() => {
     fetchPlayers();
-  }, [fetchPlayers]);
+  });
 
   return (
     <PlayerTable players={ players }/>
