@@ -8,6 +8,7 @@ import rootReducer from './reducers'
 import './index.css';
 import App from './App';
 import { api } from './constants';
+import ErrorFallback from './components/ErrorFallback'
 
 const store = createStore(
     rootReducer,
@@ -18,7 +19,9 @@ const store = createStore(
 
 render(
     <Provider store={ store }>
-        <App />
+        <ErrorFallback>
+            <App />
+        </ErrorFallback>
     </Provider>,
     document.getElementById('root')
 );
